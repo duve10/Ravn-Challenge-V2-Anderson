@@ -2,12 +2,22 @@ import { gql } from "@apollo/client";
 
 const GET_DATA = gql`
   query {
-    allPeople(first: 2) {
+    allPeople {
       people {
         id
         name
+        eyeColor
+        hairColor
+        skinColor
+        birthYear
+        vehicleConnection {
+          vehicles {
+            name
+          }
+        }
         species {
           id
+          name
         }
         homeworld {
           id
