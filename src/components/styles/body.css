@@ -15,13 +15,19 @@
     background-color: grey;
 }
 
-
-
-.loading {
+.pre-charge {
+    width: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+}
+
+.pre-charge-message {
+    display: flex;
+    justify-content: center;
     align-items: center;
-    height: 20px;
+    height: 8rem;
+    width: 70%;
+    
 }
 
 .altura {
@@ -59,12 +65,25 @@ h2,p {
     margin: 0;
 }
 
-.h2-general {
-    color: #333333;
+h2 {
     font-size: 2.26rem;
     text-transform: capitalize;
 }
 
+.h2-general {
+    color: #333333;
+    
+}
+
+.h2-grey{
+    color: #828282;
+
+}
+
+.h2-failed{
+    color: #EC5757;
+
+}
 .extra-info {
     color: rgba(0, 0, 0, 0.5);
     font-size: 1.86rem;

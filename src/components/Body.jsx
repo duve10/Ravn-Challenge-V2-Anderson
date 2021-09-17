@@ -5,33 +5,15 @@ import { useQuery } from "@apollo/client";
 import GET_DATA from "../graphql/getData.graphql";
 import { useState } from "react";
 import Loader from "./elements/Loader";
+import Message from "./elements/Message";
 
 const Body = () => {
   const { loading, error, data } = useQuery(GET_DATA);
 
   const [info, setInfo] = useState(null);
-  // const [selected, setSelected] = useState("");
-
-  // if (loading)
-  //   return (
-  //     <div>
-  //       <Loader /> <p> Loading</p>
-  //     </div>
-  //   );
-  if (error) return <p>Failed to Load Data</p>;
 
   const information = (datos, e) => {
     setInfo(datos);
-    // setSelected("no-active");
-    // if (
-    //   e.target.tagName === "P" ||
-    //   e.target.tagName === "I" ||
-    //   e.target.tagName === "H3"
-    // ) {
-    //   e.target.parentElement.parentElement.classList.add("active");
-    // } else {
-    //   e.target.classList.add("active");
-    // }
   };
 
   return (
@@ -39,6 +21,8 @@ const Body = () => {
       <div className="body">
         {loading ? (
           <Loader />
+        ) : error ? (
+          <Message message="Failed to Load Data" />
         ) : (
           data.allPeople.people.map((i) => (
             <div

@@ -20,3 +20,7 @@ li {
     border-bottom: solid 0.2px rgba(0, 0, 0, 0.1);
     height: 8rem;
 }
+
+.margin {
+    margin-top: 3.5rem;
+}
