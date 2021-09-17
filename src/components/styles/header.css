@@ -1,15 +1,14 @@
 .header-bg {
     background-color: #121212;
     width: 100%;
-    padding-left: 5rem;
     height: 7vh;
     margin: 0;
     display: flex;
     align-items: center;
 }
 
-h2 {
+.title {
     color: white;
     font-size: 2.26rem;
- 
+    margin-left: 2rem;
 }

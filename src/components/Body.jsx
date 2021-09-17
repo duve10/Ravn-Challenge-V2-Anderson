@@ -1,16 +1,16 @@
 import BodyDescription from "./BodyDescription";
-import "../stylesComponents/body.css";
+import "./styles/body.css";
 
 import { useQuery } from "@apollo/client";
 import GET_DATA from "../graphql/getData.graphql";
 import { useState } from "react";
-import Loader from "../global/Loader";
+import Loader from "./elements/Loader";
 
 const Body = () => {
   const { loading, error, data } = useQuery(GET_DATA);
 
   const [info, setInfo] = useState(null);
-  const [selected, setSelected] = useState("");
+  // const [selected, setSelected] = useState("");
 
   // if (loading)
   //   return (
@@ -22,8 +22,16 @@ const Body = () => {
 
   const information = (datos, e) => {
     setInfo(datos);
-    setSelected("person");
-    e.target.classList.add("active");
+    // setSelected("no-active");
+    // if (
+    //   e.target.tagName === "P" ||
+    //   e.target.tagName === "I" ||
+    //   e.target.tagName === "H3"
+    // ) {
+    //   e.target.parentElement.parentElement.classList.add("active");
+    // } else {
+    //   e.target.classList.add("active");
+    // }
   };
 
   return (
@@ -35,17 +43,17 @@ const Body = () => {
           data.allPeople.people.map((i) => (
             <div
               key={i.id}
-              className={selected}
+              className="person"
               onClick={(e) => information(i, e)}
             >
               <div>
-                <h3>{i.name}</h3>
-                <p>
+                <h2 className="h2-general">{i.name}</h2>
+                <p className="extra-info">
                   {i.species ? i.species.name : "Human"} from {i.homeworld.name}
                 </p>
               </div>
               <div>
-                <i className="fas fa-chevron-right"></i>
+                <i className="fas fa-chevron-right arrow"></i>
               </div>
             </div>
           ))

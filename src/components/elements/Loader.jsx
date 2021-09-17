@@ -1,10 +1,10 @@
-import "../stylesComponents/loader.css";
+import "../styles/loader.css";
 
 const Loader = () => {
   return (
     <div className="loading">
       <div>
-        <div class="lds-spinner">
+        <div className="lds-spinner">
           <div></div>
           <div></div>
           <div></div>

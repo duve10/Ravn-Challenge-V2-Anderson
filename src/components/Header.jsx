@@ -1,9 +1,9 @@
-import "../stylesComponents/header.css";
+import "./styles/header.css";
 
 const Header = () => {
   return (
-    <div>
-      <h2 className="header-bg">Ravn Star Wars Registry</h2>
+    <div className="header-bg">
+      <h2 className="title">Ravn Star Wars Registry</h2>
     </div>
   );
 };

@@ -2,7 +2,7 @@ import { gql } from "@apollo/client";
 
 const GET_DATA = gql`
   query {
-    allPeople {
+    allPeople(first: 11) {
       people {
         id
         name
@@ -13,6 +13,7 @@ const GET_DATA = gql`
         vehicleConnection {
           vehicles {
             name
+            id
           }
         }
         species {
