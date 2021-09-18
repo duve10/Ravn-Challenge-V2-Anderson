@@ -6,7 +6,7 @@ const Person = ({ details, information, active }) => {
       <div
         onClick={(e) => information(details)}
         key={details.id}
-        className={active ? "person active" : "person"}
+        className={active === details.id ? "person active" : "person"}
       >
         <div>
           <h2 className="h2-general">{details.name}</h2>

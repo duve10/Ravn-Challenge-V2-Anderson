@@ -12,16 +12,21 @@ import GET_DATA from "../graphql/getData.graphql";
 
 import "./styles/body.css";
 function Body() {
+  /** DATA FROM QUERY */
   const { loading, error, data } = useQuery(GET_DATA);
 
-  // const [active, setActive] = useState(false);
+  const [active, setActive] = useState(false);
 
   const [personDetail, setPersonDetail] = useState(null);
 
   const [counter, setCounter] = useState(0);
 
+  /** Function to send data to person component and bodyDescription */
   const information = (data) => {
+    // details to show
     setPersonDetail(data);
+    // id to change backgroundcolor
+    setActive(data.id);
   };
 
   // Use Effect to counter each 5 to show in the view
@@ -45,14 +50,16 @@ function Body() {
         {loading ? null : error ? (
           <Message message="Failed to Load Data" />
         ) : (
-          data.allPeople.people.slice(0, counter).map((details) => (
-            <Person
-              key={details.id}
-              information={information}
-              // active={active}
-              details={details}
-            ></Person>
-          ))
+          data.allPeople.people
+            .slice(0, counter)
+            .map((details) => (
+              <Person
+                key={details.id}
+                information={information}
+                active={active}
+                details={details}
+              ></Person>
+            ))
         )}
 
         {loading ? (

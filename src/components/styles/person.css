@@ -15,9 +15,6 @@
     cursor: pointer;
 }
 
-.person::selection {
-    background-color: grey;
-}
 
 .arrow {
     font-size: 1.5rem;
@@ -30,9 +27,6 @@
 
 
 .active {
-    background-color: grey;
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
-.no-active {
-    background-color: none;
-}
