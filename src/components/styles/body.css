@@ -3,66 +3,58 @@
     grid-template-columns: 1fr 3fr;
     
 }
-
-
-
-.person:hover {
-    background-color: grey;
-    cursor: pointer;
-}
-
-.person::selection {
-    background-color: grey;
-}
-
-.pre-charge {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-.pre-charge-message {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 8rem;
-    width: 70%;
-    
-}
-
-.altura {
+.height {
     height: 93vh;
 
 }
 
 .body {
     border-right: solid 0.2px rgba(0, 0, 0, 0.1);
-    /* overflow-y: scroll; */
+    overflow-y: scroll;
 }
 
-
-
-.active {
-    background-color: grey;
+/**SCROLL  */
+.body::-webkit-scrollbar {
+    width: 8px;     /* vertical scroll size */
+    height: 5px;   /* horizontal scroll*/
 }
 
-.no-active {
-    background-color: none;
+/* background color*/
+.body::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
 }
 
-/** DIV DE PERSON */
-
-.person {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 1rem;
-    height: 8rem;
-    border-bottom: solid 0.2px rgba(0, 0, 0, 0.1);
+/* background color and shadow */
+.body::-webkit-scrollbar-thumb:hover {
+    background: #b3b3b3;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
 }
+
+/* change background color active*/
+.body::-webkit-scrollbar-thumb:active {
+    background-color: #999999;
+}
+/* track background color */
+.body::-webkit-scrollbar-track {
+    background: #e1e1e1;
+    border-radius: 4px;
+}
+
+/* in hover, backgroundcolor*/
+.body::-webkit-scrollbar-track:hover,
+.body::-webkit-scrollbar-track:active {
+  background: #d4d4d4;
+}
+
+/**END SCROLL */
+
+
+/* GENERAL CSS */
 
 h2,p {
     margin: 0;
+    font-family: sans-serif;
 }
 
 h2 {
@@ -84,11 +76,5 @@ h2 {
     color: #EC5757;
 
 }
-.extra-info {
-    color: rgba(0, 0, 0, 0.5);
-    font-size: 1.86rem;
-}
 
-.arrow {
-    font-size: 1.5rem;
-}
+

@@ -1,3 +1,5 @@
+import "../styles/elements.css";
+
 const Message = ({ message }) => {
   return (
     <div className="pre-charge">

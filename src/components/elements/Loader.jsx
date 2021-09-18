@@ -1,4 +1,5 @@
 import Loaders from "react-js-loader";
+import "../styles/elements.css";
 
 const Loader = () => {
   return (
@@ -13,7 +14,7 @@ const Loader = () => {
           />
         </div>
 
-        <h2 className="h2-grey">Loading</h2>
+        <h2 className="h2-grey margin-load">Loading</h2>
       </div>
     </div>
   );

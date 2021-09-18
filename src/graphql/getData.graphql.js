@@ -2,7 +2,8 @@ import { gql } from "@apollo/client";
 
 const GET_DATA = gql`
   query {
-    allPeople(first: 11) {
+    allPeople {
+      totalCount
       people {
         id
         name

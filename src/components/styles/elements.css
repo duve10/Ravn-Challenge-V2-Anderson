@@ -1,0 +1,17 @@
+.pre-charge {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.pre-charge-message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8rem;
+    width: 100%;
+    
+}
+.margin-load {
+    margin-left: 1rem;
+}
