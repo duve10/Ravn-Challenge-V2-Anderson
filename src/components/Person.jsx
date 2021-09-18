@@ -1,12 +1,12 @@
 import "./styles/person.css";
 
-const Person = ({ details, information }) => {
+const Person = ({ details, information, active }) => {
   return (
     <>
       <div
         onClick={(e) => information(details)}
         key={details.id}
-        className="person"
+        className={active ? "person active" : "person"}
       >
         <div>
           <h2 className="h2-general">{details.name}</h2>
