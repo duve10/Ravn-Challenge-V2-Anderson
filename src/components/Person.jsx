@@ -1,5 +1,5 @@
 import "./styles/person.css";
-
+/** COMPONENT FOR EACH PERSON */
 const Person = ({ details, information, active }) => {
   return (
     <>

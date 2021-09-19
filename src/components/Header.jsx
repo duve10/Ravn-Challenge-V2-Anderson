@@ -1,5 +1,5 @@
 import "./styles/header.css";
-
+/** HEADER GENERAL */
 const Header = () => {
   return (
     <div className="header-bg">

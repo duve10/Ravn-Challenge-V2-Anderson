@@ -1,5 +1,5 @@
 import "../styles/elements.css";
-
+/** COMPONENT MESSAGE USING A MESSAGE */
 const Message = ({ message }) => {
   return (
     <div className="pre-charge">

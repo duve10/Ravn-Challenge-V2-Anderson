@@ -5,6 +5,7 @@ import Body from "./Body";
 const General = () => {
   return (
     /*Implement apollo provider and client */
+    /** GENERAL VIEW  */
     <div>
       <ApolloProvider client={client}>
         <Body />

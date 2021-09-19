@@ -1,24 +1,26 @@
+/** component body  */
+/** HOOKS */
 import { useEffect, useState } from "react";
 
+/** IMPORT COMPONENTS */
 import Loader from "./elements/Loader";
 import Person from "./Person";
 import BodyDescription from "./BodyDescription";
-
 import Message from "./elements/Message";
 
 /** Implement apollo graphql */
 import { useQuery } from "@apollo/client";
 import GET_DATA from "../graphql/getData.graphql";
-
+/** CSS */
 import "./styles/body.css";
+
 function Body() {
   /** DATA FROM QUERY */
   const { loading, error, data } = useQuery(GET_DATA);
 
+  /** VARIABLES */
   const [active, setActive] = useState(false);
-
   const [personDetail, setPersonDetail] = useState(null);
-
   const [counter, setCounter] = useState(0);
 
   /** Function to send data to person component and bodyDescription */

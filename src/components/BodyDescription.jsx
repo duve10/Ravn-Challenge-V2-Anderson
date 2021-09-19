@@ -1,5 +1,5 @@
 import "./styles/bodyDescription.css";
-
+/** BODY DESCRIPTION BRING THE INFORMATION OF A PERSON */
 /* Details of person */
 const BodyDescription = ({ information }) => {
   return !information ? null : (

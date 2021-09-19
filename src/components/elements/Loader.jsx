@@ -1,6 +1,6 @@
 import Loaders from "react-js-loader";
 import "../styles/elements.css";
-
+/** LOADER  */
 const Loader = () => {
   return (
     <div className="pre-charge">
